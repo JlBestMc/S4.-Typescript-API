@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+.gradient-1 {
+            background-image: linear-gradient(90deg, #ffeb3b, #ff9800, rgb(240, 64, 64));
+            background-size: 200% 100%;
+            background-position: 100% 0;
+        }
+
+.main-text{
+    opacity: 0;
+}
