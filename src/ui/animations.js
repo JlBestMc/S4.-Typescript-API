@@ -13,10 +13,31 @@ export const animateText = () => {
      gsap.to("#text1 .main-text", 
     {
     backgroundPosition: "0% 0%", 
-    duration: 3, 
+    duration: 2, 
     repeat: -1,  
     yoyo: true,
     ease: "power1.inOut"
 
     });
+
+    gsap.to("#joke", {
+    opacity: 1,
+    duration: 2,  
+    delay: 2.5,  
+    ease: "power2.out"  
+  });
+
+  gsap.to("#buttons-score", {
+    opacity: 1,
+    duration: 2,  
+    delay: 3.5,  
+    ease: "power2.out"  
+  });
+
+  gsap.to("#next-joke", {
+    opacity: 1,
+    duration: 2,  
+    delay: 3.5,  
+    ease: "power2.out"  
+  });
 };
