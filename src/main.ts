@@ -1,5 +1,5 @@
 import './ui/style.css'
-import { animateText } from './ui/animations.js'
+import { animateText } from './ui/animations.js';
 import { showJoke } from "./ui/uiJokes.ts";
 
 document.addEventListener('DOMContentLoaded', () => {
