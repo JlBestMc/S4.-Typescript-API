@@ -1,10 +1,12 @@
 import './ui/style.css'
 import { animateText } from './ui/animations.js';
 import { showJoke, setupVoteButtons } from "./ui/uiJokes.ts";
+import { showWeather } from "./ui/uiWeather.ts";
 
 document.addEventListener('DOMContentLoaded', () => {
   animateText();
   setupVoteButtons();
+  showWeather();
 });
 
 document.addEventListener("DOMContentLoaded", () => {

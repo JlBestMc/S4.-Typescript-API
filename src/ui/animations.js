@@ -40,4 +40,11 @@ export const animateText = () => {
     delay: 3.5,  
     ease: "power2.out"  
   });
+
+  gsap.to("#weather-container", {
+    opacity: 1,
+    duration: 2,  
+    delay: 4.5,  
+    ease: "power2.out"  
+  });
 };
