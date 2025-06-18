@@ -1,9 +1,10 @@
 import './ui/style.css'
-import { animateText } from './ui/animations.js'
-import { showJoke } from "./ui/uiJokes.ts";
+import { animateText } from './ui/animations.js';
+import { showJoke, setupVoteButtons } from "./ui/uiJokes.ts";
 
 document.addEventListener('DOMContentLoaded', () => {
   animateText();
+  setupVoteButtons();
 });
 
 document.addEventListener("DOMContentLoaded", () => {
