@@ -7,15 +7,7 @@ export type Report = {
 let reportAcudits: Report[] = [];
 
 export function updateReport(joke: string, score: number): void {
-  const existing = reportAcudits.find((r) => r.joke === joke);
   const date = new Date().toISOString();
-
-  if (existing) {
-    existing.score = score;
-    existing.date = date;
-  } else {
-    reportAcudits.push({ joke, score, date });
-  }
-
+  reportAcudits.push({ joke, score, date });
   console.log("reportAcudits:", reportAcudits);
 }
