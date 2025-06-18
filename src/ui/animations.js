@@ -47,4 +47,11 @@ export const animateText = () => {
     delay: 4.5,  
     ease: "power2.out"  
   });
+
+  gsap.to("#weather-canvas", {
+    opacity: 1,
+    duration: 2,  
+    delay: 4.5,  
+    ease: "power2.out"  
+  });
 };

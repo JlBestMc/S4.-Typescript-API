@@ -61,11 +61,22 @@
       >
         Següent acudit ➡️
       </button>
-
-      <div id="contenedor3d" style="width: 400px; height: 400px"></div>
-      <div id="weather-container" class="opacity-0">
-        <p id="weather" class="text-3xl text-white mt-10">Carregant temps...</p>
-      </div>
+      <section
+        id="weather-container"
+        class="flex justify-center opacity-0 items-center mt-10 flex-col relative border-4 border-amber-100 rounded-2xl"
+      >
+        <div class="relative w-52 h-52 mb-2">
+          <canvas
+            id="weather-canvas"
+            class="absolute top-0 left-0 w-full h-full"
+          ></canvas>
+        </div>
+        <div>
+          <p id="weather" class="text-xl mb-4 mx-3 font-bold text-yellow-100">
+            Carregant temps...
+          </p>
+        </div>
+      </section>
     </main>
     <script type="module" src="/src/main.ts"></script>
   </body>
