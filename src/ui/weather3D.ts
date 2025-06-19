@@ -35,13 +35,11 @@ export function initThreeViewer(): void {
 
   animate();
 
-  loadModel("/sol-draco.glb"); // 👈 aquí cargas el modelo con DRACO
 }
 
 export function loadModel(path: string): void {
   const loader = new GLTFLoader();
 
-  // Añadimos DRACO Loader
   const dracoLoader = new DRACOLoader();
   dracoLoader.setDecoderPath("https://www.gstatic.com/draco/v1/decoders/");
   loader.setDRACOLoader(dracoLoader);
@@ -59,7 +57,6 @@ export function loadModel(path: string): void {
       const box = new THREE.Box3().setFromObject(currentModel);
       const size = new THREE.Vector3();
       box.getSize(size);
-
       const center = new THREE.Vector3();
       box.getCenter(center);
       currentModel.position.sub(center);
@@ -67,6 +64,21 @@ export function loadModel(path: string): void {
       const maxAxis = Math.max(size.x, size.y, size.z);
       const scaleFactor = 3.0 / maxAxis;
       currentModel.scale.setScalar(scaleFactor);
+
+      if (path.includes("sol") || path.includes("luna")) {
+        currentModel.traverse((child) => {
+          if ((child as THREE.Mesh).isMesh) {
+            const mesh = child as THREE.Mesh;
+            if (Array.isArray(mesh.material)) {
+              mesh.material.forEach((m) => {
+                (m as THREE.MeshStandardMaterial).color.set("#FFFF00"); 
+              });
+            } else {
+              (mesh.material as THREE.MeshStandardMaterial).color.set("#FFFF00");
+            }
+          }
+        });
+      }
 
       scene.add(currentModel);
     },

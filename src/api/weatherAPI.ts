@@ -2,6 +2,8 @@ export async function fetchWeather(): Promise<{
   temperature: number;
   wind: number;
   precipitation: number;
+  weathercode: number;
+  is_day: number;
 }> {
   try {
     const response = await fetch(
@@ -16,11 +18,14 @@ export async function fetchWeather(): Promise<{
     const temperature = data.current_weather.temperature;
     const wind = data.current_weather.windspeed;
     const precipitation = data.hourly.precipitation_probability[0];
+    const weathercode = data.current_weather.weathercode;
+    const is_day = data.current_weather.is_day;
 
-    return { temperature, wind, precipitation };
+    return { temperature, wind, precipitation, weathercode, is_day };
   } catch (error) {
     console.error("Error carregant el temps:", error);
-    return { temperature: 0, wind: 0, precipitation: 0 };
+    return { temperature: 0, wind: 0, precipitation: 0, weathercode: 0, is_day: 1 };
   }
 }
+
 
