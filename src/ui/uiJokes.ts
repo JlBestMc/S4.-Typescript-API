@@ -1,5 +1,5 @@
 import { fetchJoke } from "../api/jokesAPI";
-import {updateReport} from "../core/report";
+import { updateReport } from "../core/report";
 
 let currentJoke = "";
 
@@ -12,7 +12,9 @@ export async function showJoke(): Promise<void> {
 }
 
 export function setupVoteButtons(): void {
-  const buttons = document.querySelectorAll<HTMLButtonElement>("#buttons-score button");
+  const buttons = document.querySelectorAll<HTMLButtonElement>(
+    "#buttons-score button"
+  );
 
   buttons.forEach((button) => {
     button.addEventListener("click", () => {
