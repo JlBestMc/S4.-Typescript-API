@@ -9,7 +9,7 @@
     class="bg-blue-50 flex items-center flex-col bg-[url('./public/bg.svg')] bg-cover bg-no-repeat bg-center min-h-screen"
   >
     <main class="flex items-center justify-center flex-col mt-10 bg">
-      <div class="relative inline-block" id="text1">
+      <div class="relative inline-block text-center" id="text1">
         <span
           class="main-text text-6xl font-bold text-transparent bg-clip-text gradient-1 bg-size-700 bg-pos-start"
         >
@@ -61,6 +61,22 @@
       >
         Següent acudit ➡️
       </button>
+      <section
+        id="weather-container"
+        class="flex justify-center opacity-0 items-center mt-10 flex-col relative border-4 border-amber-100 rounded-2xl"
+      >
+        <div class="relative w-52 h-52 mb-2">
+          <canvas
+            id="weather-canvas"
+            class="absolute top-0 left-0 w-full h-full"
+          ></canvas>
+        </div>
+        <div>
+          <p id="weather" class="text-xl mb-4 mx-3 font-bold text-yellow-100">
+            Carregant temps...
+          </p>
+        </div>
+      </section>
     </main>
     <script type="module" src="/src/main.ts"></script>
   </body>
