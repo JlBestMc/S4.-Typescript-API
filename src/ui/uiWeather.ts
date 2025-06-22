@@ -13,14 +13,14 @@ export async function showWeather(): Promise<void> {
 
   if (is_day === 0) {
     //si es de noche, entonces
-    loadModel("/luna-draco.glb");
+    loadModel("./luna-draco.glb");
   } else if (weathercode >= 80) {
     //de 80 arriba, es lluvia o tormentas
-    loadModel("/lluvia-draco.glb");
+    loadModel("./lluvia-draco.glb");
   } else if (weathercode >= 1 && weathercode <= 3) {
     //del 1 al 3, nubes
-    loadModel("/nube-draco.glb");
+    loadModel("./nube-draco.glb");
   } else {
-    loadModel("/sol-draco.glb");
+    loadModel("./sol-draco.glb");
   }
 }
