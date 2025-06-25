@@ -23,21 +23,35 @@ export const animateText = () => {
     gsap.to("#joke", {
     opacity: 1,
     duration: 2,  
-    delay: 2.5,  
+    delay: 1,  
     ease: "power2.out"  
   });
 
   gsap.to("#buttons-score", {
     opacity: 1,
     duration: 2,  
-    delay: 3.5,  
+    delay: 1,  
     ease: "power2.out"  
   });
 
   gsap.to("#next-joke", {
     opacity: 1,
     duration: 2,  
-    delay: 3.5,  
+    delay: 1,  
+    ease: "power2.out"  
+  });
+
+  gsap.to("#weather-container", {
+    opacity: 1,
+    duration: 2,  
+    delay: 1,  
+    ease: "power2.out"  
+  });
+
+  gsap.to("#weather-canvas", {
+    opacity: 1,
+    duration: 2,  
+    delay: 1,  
     ease: "power2.out"  
   });
 };

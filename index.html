@@ -2,14 +2,15 @@
 <html lang="ca">
   <head>
     <meta charset="UTF-8" />
-    <title>Jokes</title>
+    <title>Jokes and Weather</title>
     <link href="./src/ui/style.css" rel="stylesheet" />
+    <link rel="icon" href="/favicon.ico" />
   </head>
   <body
-    class="bg-blue-50 flex items-center flex-col bg-[url('./public/bg.svg')] bg-cover bg-no-repeat bg-center min-h-screen"
+    class="bg-blue-50 mx-10 flex items-center flex-col bg-[url('/bg.svg')] bg-cover bg-no-repeat bg-center min-h-screen"
   >
-    <main class="flex items-center justify-center flex-col mt-10 bg">
-      <div class="relative inline-block" id="text1">
+    <main class="flex items-center justify-center flex-col mt-7 bg mx-5">
+      <div class="relative inline-block text-center" id="text1">
         <span
           class="main-text text-6xl font-bold text-transparent bg-clip-text gradient-1 bg-size-700 bg-pos-start"
         >
@@ -17,7 +18,7 @@
         </span>
       </div>
       <p
-        class="text-amber-300 font-bold text-xl my-6 text-center opacity-0"
+        class="text-amber-300 font-bold text-3xl my-10 text-center opacity-0"
         id="joke"
       >
         Carregant acudit...
@@ -27,6 +28,7 @@
           class="hover:scale-x-105 transition-all duration-300 *:transition-all *:duration-300 flex justify-start text-3xl items-center shadow-xl z-10 bg-[#e8e4df] dark:bg-[#191818] gap-2 p-2 rounded-full mb-6"
         >
           <button
+            data-score="1"
             class="w-20 h-16 before:hidden hover:border-4 hover:border-yellow-500 before:justify-center before:items-center before:h-4 before:text-[.6rem] before:px-1 before:bg-black dark:before:bg-white dark:before:text-black before:text-white before:bg-opacity-50 before:absolute before:-top-7 before:rounded-lg hover:-translate-y-5 cursor-pointer hover:scale-125 bg-white dark:bg-yellow-100 rounded-full p-2 px-3"
           >
             😓
@@ -36,6 +38,7 @@
           class="hover:scale-x-105 mx-5 transition-all duration-300 *:transition-all *:duration-300 flex justify-start text-3xl items-center shadow-xl z-10 bg-[#e8e4df] dark:bg-[#191818] gap-2 p-2 rounded-full mb-6"
         >
           <button
+            data-score="2"
             class="w-20 h-16 before:hidden hover:border-4 hover:border-yellow-500 before:justify-center before:items-center before:h-4 before:text-[.6rem] before:px-1 before:bg-black dark:before:bg-white dark:before:text-black before:text-white before:bg-opacity-50 before:absolute before:-top-7 before:rounded-lg hover:-translate-y-5 cursor-pointer hover:scale-125 bg-white dark:bg-yellow-100 rounded-full p-2 px-3"
           >
             😐
@@ -45,6 +48,7 @@
           class="hover:scale-x-105 transition-all duration-300 *:transition-all *:duration-300 flex justify-start text-3xl items-center shadow-xl z-10 bg-[#e8e4df] dark:bg-[#191818] gap-2 p-2 rounded-full mb-6"
         >
           <button
+            data-score="3"
             class="w-20 h-16 before:hidden hover:border-4 hover:border-yellow-500 before:justify-center before:items-center before:h-4 before:text-[.6rem] before:px-1 before:bg-black dark:before:bg-white dark:before:text-black before:text-white before:bg-opacity-50 before:absolute before:-top-7 before:rounded-lg hover:-translate-y-5 cursor-pointer hover:scale-125 bg-white dark:bg-yellow-100 rounded-full p-2 px-3"
           >
             😆
@@ -58,6 +62,24 @@
       >
         Següent acudit ➡️
       </button>
+      <section
+        id="weather-container"
+        class="flex justify-center opacity-0 items-center mt-10 flex-col relative border-4 border-amber-100 rounded-2xl"
+      >
+
+        <div class="relative w-56 h-56 mb-2">
+          <p class="text-2xl mt-2 text-center font-bold text-yellow-100">Barcelona</p>
+          <canvas
+            id="weather-canvas"
+            class="absolute top-5 left-0 w-full h-full"
+          ></canvas>
+        </div>
+        <div>
+          <p id="weather" class="text-xl mb-4 mx-3 font-bold text-yellow-100">
+            Carregant temps...
+          </p>
+        </div>
+      </section>
     </main>
     <script type="module" src="/src/main.ts"></script>
   </body>
