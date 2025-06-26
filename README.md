@@ -59,6 +59,13 @@ Make sure you have Node.js installed. Then install the packages:
 npm install
 ```
 
+### 3️⃣ Start Development Server
+
+```bash
+npm run server
+```
+
+
 ## 📁 Project Structure
 
 ```
