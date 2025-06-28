@@ -101,7 +101,7 @@ npm run server
     - Blender
 
 
-![Technologie Icons](https://skillicons.dev/icons?i=html,css,tailwind,js,typescript,threejs,blender "Technologie Icons")
+![Technologie Icons](https://skillicons.dev/icons?i=html,css,tailwind,js,typescript,threejs,blender,vite,nodejs "Technologie Icons")
 
 
 ## ⏳ Project Status
